@@ -1,5 +1,5 @@
 
-public class submit {
+public class Repositorio {
 	private String nome;
 	private String curso;
 	private String orientador;
