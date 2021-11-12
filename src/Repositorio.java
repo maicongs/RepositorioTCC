@@ -1,17 +1,25 @@
 
 public class Repositorio {
 	private String nome;
+	private String email;
 	private String curso;
 	private String orientador;
 	private String titulo;
 	private String palavra_chave;
 	private String resumo;
-	private String teste;
+	
 	public String getNome() {
 		return nome;
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getCurso() {
 		return curso;
