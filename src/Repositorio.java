@@ -7,6 +7,8 @@ public class Repositorio {
 	private String titulo;
 	private String palavra_chave;
 	private String resumo;
+	private String situação;
+	private String confirmação;
 	
 	public String getNome() {
 		return nome;
@@ -51,6 +53,19 @@ public class Repositorio {
 	public void setResumo(String resumo) {
 		this.resumo = resumo;
 	}
+	public String getSituação() {
+		return situação;
+	}
+	public void setSituação(String situação) {
+		this.situação = situação;
+	}
+	public String getConfirmação() {
+		return confirmação;
+	}
+	public void setConfirmação(String confirmação) {
+		this.confirmação = confirmação;
+	}
+	
 	
 	
 	
