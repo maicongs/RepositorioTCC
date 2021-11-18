@@ -49,7 +49,7 @@
 		<br>
 		<input type="text" name="palavra_chave4"/>
 		<br>
-		<input type="text" name="palavra_chave4"/>
+		<input type="text" name="palavra_chave5"/>
 		<br>
 		
 		Resumo: 
