@@ -1,3 +1,4 @@
+package org.libertas;
 import java.sql.Connection;
 
 public class Conexao {

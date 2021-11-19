@@ -1,7 +1,9 @@
+package org.libertas;
 
 public class Repositorio {
 	private int id;
 	private String nome;
+	private String ra;
 	private String email;
 	private String curso;
 	private String orientador;
@@ -27,7 +29,12 @@ public class Repositorio {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+	public String getRa() {
+		return ra;
+	}
+	public void setRa(String ra) {
+		this.ra = ra;
+	}
 	public String getEmail() {
 		return email;
 	}

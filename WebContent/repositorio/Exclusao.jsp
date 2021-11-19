@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:useBean id="r" class="">
+	<jsp:useBean id="r" class="org.libertas.Repositorio" scope="page"/>
 	<jsp:setProperty property="*" name="r">
 	<p>Confirma a Exclusão?</p>
 
