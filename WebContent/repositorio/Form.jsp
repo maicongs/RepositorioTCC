@@ -74,15 +74,19 @@
 		</br>
 		
 		<label class="form-label">Enviar Arquivo</label>
+		<input type="file">
+		</br>
 		</br>
 		
+		<label class="form-label">
+		<span class="h5"><strong>O trabalho pode ser postado?</strong></span>
+		</label>
+			<input type="radio" name="confirmacao"> Sim
+			<input type="radio" name="confirmacao"> Não
+			<br>
 		
-		
-		O trabalho pode ser postado?
-		<input type="radio" name="confirmacao">
-		<br>
-		
-		<input type="submit" value="Salvar"/>
+		<input type="submit" class="btn btn-danger" value="Salvar"/>
+		<a href="Index.jsp" class="btn btn-success">Voltar</a>
 		
 		
 	
