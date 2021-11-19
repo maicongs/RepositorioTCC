@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div class="container">
-	<h1>Cadastro Repositorios</h1>
+	<h1>Cadastro de Trabalhos de Curso</h1>
 	<form action="save.jsp" method="post">
 		<input type="hidden" name="id"/>
 		
@@ -28,13 +28,26 @@
 		
 		<select class="form-select">Curso
 			<option selected>Selecione o curso</option>
-			<option></option>
+			<option>Administração</option>
+			<option>Ciencias Contábeis</option>
+			<option>Direito</option>
+			<option>Enfermagem</option>
+			<option>Engenharia Civil</option>
+			<option>Engenharia de Produção</option>
+			<option>Pedagogia</option>
+			<option>Psicologia</option>
+			<option>Sistemas de Informação</option>
+			<option>Odontologia</option>
+			
 		</select>
 		</br>
 		
 		<select class="form-select">Orientador
 			<option selected>Selecione o orientador</option>
-			<option></option>
+			<option>Alysson</option>
+			<option>Dorival</option>
+			<option>Ely</option>
+			<option>Fernando</option>
 		</select>
 		</br>
 		
@@ -54,13 +67,13 @@
 			<input class="form-control" type="text" name="palavra_chave5"/>
 			</br>
 		</label>
+		</br>
 		
-	
-		Resumo: 
-		<input type="text" name="resumo"> 
-		<br>
+		<label class="form-label">Resumo</label>
+		<textarea class="form-control" name="resumo" rows="5"></textarea>
+		</br>
 		
-		Enviar Arquivo:
+		<label class="form-label">Enviar Arquivo</label>
 		</br>
 		
 		
