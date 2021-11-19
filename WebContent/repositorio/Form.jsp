@@ -26,6 +26,7 @@
 		<input class="form-control" type="text" name="email"/>
 		<br/>
 		
+		<labeL class="form-label">Curso:</labeL>
 		<select class="form-select">Curso
 			<option selected>Selecione o curso</option>
 			<option>Administração</option>
@@ -42,6 +43,7 @@
 		</select>
 		</br>
 		
+		<labeL class="form-label">Orientador:</labeL>
 		<select class="form-select">Orientador
 			<option selected>Selecione o orientador</option>
 			<option>Alysson</option>
@@ -73,7 +75,7 @@
 		<textarea class="form-control" name="resumo" rows="5"></textarea>
 		</br>
 		
-		<label class="form-label">Enviar Arquivo</label>
+<!-- 		input onde sera feito o upload de arquivos -->
 		<input type="file">
 		</br>
 		</br>
