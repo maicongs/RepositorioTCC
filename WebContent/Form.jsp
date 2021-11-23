@@ -12,7 +12,7 @@
 	<div class="container">
 	<h1>Cadastro de Trabalhos de Curso</h1>
 	
-	<form action="save.jsp" method="post">
+	<form action="EnvioUpload" enctype="multipart/form-data" method="post">
 		<input type="hidden" name="id"/>
 		
 		<label class="form-label">Nome</label>
@@ -28,9 +28,9 @@
 		<br/>
 		
 		<labeL class="form-label">Curso:</labeL>
-		<select class="form-select">Curso
-			<option selected>Selecione o curso</option>
-			<option>Administração</option>
+		<select class="form-select" name="curso">Curso
+			<option value="0" selected>Selecione o curso</option>
+			<option value="1">Administração</option>
 			<option>Ciencias Contábeis</option>
 			<option>Direito</option>
 			<option>Enfermagem</option>
@@ -77,7 +77,7 @@
 		</br>
 		
 <!-- 		input onde sera feito o upload de arquivos -->
-		<input type="file">
+		<input type="file" name="arquivo">
 		</br>
 		</br>
 		
