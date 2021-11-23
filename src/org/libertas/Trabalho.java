@@ -1,7 +1,7 @@
 package org.libertas;
 
 public class Trabalho {
-	private String id_trabalho;
+	private int id_trabalho;
 	private String titulo;
 	private String resumo;
 	private String palavra_chave1;
@@ -11,17 +11,14 @@ public class Trabalho {
 	private String palavra_chave5;
 	private String situacao;
 	private String confirmacao;
-	private String id_professor;
-	private String id_curso;
-	private String ra_aluno;
+	private int id_professor;
+	private int id_curso;
+	private int ra_aluno;
 	
-	public String getIdTrabalho() {
-		return id_trabalho;
-	}
-	public void setIdTrabalho(String trabalho) {
+	
+	public void setId_trabalho(int id_trabalho) {
 		this.id_trabalho = id_trabalho;
 	}
-	
 	public String getTitulo() {
 		return titulo;
 	}
@@ -35,65 +32,67 @@ public class Trabalho {
 		this.resumo = resumo;
 	}
 		
-	public void getPalavraChave1(String palavra) {
+	public String getPalavra_chave1() {
+		return palavra_chave1;
+	}
+	public void setPalavra_chave1(String palavra_chave1) {
 		this.palavra_chave1 = palavra_chave1;
 	}
-	public void setPalavraChave1(String palavra) {
-		this.palavra_chave1 = palavra_chave1;
+	public String getPalavra_chave2() {
+		return palavra_chave2;
 	}
-	public void getPalavraChave2(String palavra) {
+	public void setPalavra_chave2(String palavra_chave2) {
 		this.palavra_chave2 = palavra_chave2;
 	}
-	public void setPalavraChave2(String palavra) {
-		this.palavra_chave2 = palavra_chave2;
+	public String getPalavra_chave3() {
+		return palavra_chave3;
 	}
-	public void getPalavraChave3(String palavra) {
+	public void setPalavra_chave3(String palavra_chave3) {
 		this.palavra_chave3 = palavra_chave3;
 	}
-	public void setPalavraChave3(String palavra) {
-		this.palavra_chave3 = palavra_chave3;
+	public String getPalavra_chave4() {
+		return palavra_chave4;
 	}
-	public void getPalavraChave4(String palavra) {
+	public void setPalavra_chave4(String palavra_chave4) {
 		this.palavra_chave4 = palavra_chave4;
 	}
-	public void setPalavraChave4(String palavra) {
-		this.palavra_chave4 = palavra_chave4;
+	public String getPalavra_chave5() {
+		return palavra_chave5;
 	}
-	public void getPalavraChave5(String palavra) {
+	public void setPalavra_chave5(String palavra_chave5) {
 		this.palavra_chave5 = palavra_chave5;
 	}
-	public void setPalavraChave5(String palavra) {
-		this.palavra_chave5 = palavra_chave5;
-	}
-	public void getSituacao(String situacao) {
-		this.situacao = situacao;
+	
+	public String getSituacao() {
+		return situacao;
 	}
 	public void setSituacao(String situacao) {
 		this.situacao = situacao;
 	}
-	public void getConfirmacao(String confirmacao) {
-		this.confirmacao = confirmacao;
+	public String getConfirmacao() {
+		return confirmacao;
 	}
 	public void setConfirmacao(String confirmacao) {
 		this.confirmacao = confirmacao;
 	}
-	public void getIdProfessor(String id) {
+	public int getId_professor() {
+		return id_professor;
+	}
+	public void setId_professor(int id_professor) {
 		this.id_professor = id_professor;
 	}
-	public void setIdProfessor(String id) {
-		this.id_professor = id_professor;
+	public int getId_curso() {
+		return id_curso;
 	}
-	public void getIdCurso(String id) {
+	public void setId_curso(int id_curso) {
 		this.id_curso = id_curso;
 	}
-	public void setIdCurso(String id) {
-		this.id_curso = id_curso;
+	public int getRa_aluno() {
+		return ra_aluno;
 	}
-	public void getRAaluno(String ra) {
+	public void setRa_aluno(int ra_aluno) {
 		this.ra_aluno = ra_aluno;
 	}
-	public void setRAaluno(String ra) {
-		this.ra_aluno = ra_aluno;
-	}
-
+	
+	
 }
