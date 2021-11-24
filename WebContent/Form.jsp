@@ -9,6 +9,7 @@
 <link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
 <body>
+	<div class="p-3 mb-2 bg-success text-black">
 	<div class="container">
 		<header class="row">
 			<h1>Cadastro de Trabalhos de Curso</h1>
@@ -70,9 +71,8 @@
 					<input class="form-control" type="text" name="palavra_chave4"/>
 					</br>
 					<input class="form-control" type="text" name="palavra_chave5"/>
-					</br>
-			</label>
-					</br>
+					</br>	
+				</label>
 		</div>
 		
 		<aside role="complementary" class="col-md-6">
@@ -81,9 +81,9 @@
 			<textarea class="form-control" name="resumo" rows="10"></textarea>
 			</br>
 		
-			<!-- 		input onde sera feito o upload de arquivos -->
+			<!-- input onde sera feito o upload de arquivos -->
 			<input type="file" name="arquivo">
-			</br></br>
+			</br></br></br>
 			
 			<label class="form-label">
 			<span class="h5"><strong>O trabalho pode ser postado?</strong></span>
@@ -91,13 +91,13 @@
 			<input type="radio" name="confirmacao"> Sim
 			<input type="radio" name="confirmacao"> Não
 			</br>
-		
+			
 			<input type="submit" class="btn btn-success" value="Salvar"/>
 			<a href="Index.jsp" class="btn btn-danger">Voltar</a>		
 		</aside>	
 		</form>
-	
+	</div>
 		<script src="js/bootstrap.min.js"></script>
-
+	
 </body>
 </html>
