@@ -8,10 +8,8 @@ public class Conexao {
 
 		public Conexao() {
 			try {
-				Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-				String url = "jdbc:mariadb://192.168.1.178:30003/reidelas"; // USAR ESSE LOCAL
-				//String url = "jdbc:mariadb://186.248.131.178:30003/ratofumante"; // USAR ESSE FORA DA FACUL
-				//String url = "jdbc:mariadb://remotemysql.com:3306/2EyRmeqEIM";
+				Class.forName("org.mariadb.jdbc.Driver").newInstance();
+				String url = "jdbc:mariadb://192.168.1.178:30003/reidelas";
 				conexao = DriverManager.getConnection(url, "grupo2", "AsBolasSaoQuadradas.2");
 
 			} catch (Exception e) {

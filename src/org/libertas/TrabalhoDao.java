@@ -7,8 +7,8 @@ public class TrabalhoDao {
     public void submissao(Trabalho t) {
 		try {
 			Conexao con = new Conexao();
-			String sql = "INSERT INTO trabalho (titulo, resumo, palavra-chave1, palavra-chave2, palavra-chave3, "
-					+ " palavra-chave4, palavra-chave5, situacao, confirmacao, id_professor, id_curso, ra_aluno"
+			String sql = "INSERT INTO trabalho (titulo, resumo, palavra_chave1, palavra_chave2, palavra_chave3, "
+					+ " palavra_chave4, palavra_chave5, situacao, confirmacao, id_professor, id_curso, ra_aluno"
 					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?))";
 			PreparedStatement trab = con.getConexao().prepareStatement(sql);
 			trab.setString(1, t.getTitulo());
