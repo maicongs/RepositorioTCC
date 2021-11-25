@@ -3,8 +3,8 @@ package org.libertas;
 public class Aluno {
 	private String nome;
 	private String email;
-	private int id_curso;
-	private int ra;
+	private String id_curso;
+	private String ra;
 	
 	public String getNome() {
 		return nome;
@@ -19,16 +19,18 @@ public class Aluno {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getId_curso() {
+	public String getCurso() {
 		return id_curso;
 	}
-	public void setId_curso(int id_curso) {
-		this.id_curso = id_curso;
+	public void setCurso(String curso) {
+		this.id_curso = curso;
 	}
-	public int getRa() {
-		return ra;
-	}
-	public void setRa(int ra) {
+		
+	public void getRA(String ra) {
 		this.ra = ra;
 	}
+	public void setRA(String ra) {
+		this.ra = ra;
+	}
+
 }
