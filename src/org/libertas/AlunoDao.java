@@ -1,10 +1,7 @@
 package org.libertas;
 import java.sql.PreparedStatement;
-<<<<<<< HEAD
 import java.sql.ResultSet;
 import java.sql.Statement;
-=======
->>>>>>> 5b93ca362db60fa418d32e642327e21514b76e1e
 import java.util.LinkedList;
 import java.util.List;
 
