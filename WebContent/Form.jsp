@@ -29,12 +29,10 @@
 	
 	<div class="p-3 mb-2 bg-success text-black">
 	<div class="container">
-		<header class="row">
-			
-		</header>
-		<div text-align="center">
+		<header class="row" align="center">
 			<h1>Cadastro de Trabalhos de Curso</h1>
-		</div>
+		</header>
+		
 		<div class="row">
 			<div role="main" class="col-md-6">
 			
