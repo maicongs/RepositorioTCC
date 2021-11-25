@@ -1,21 +1,21 @@
 package org.libertas;
 
 public class Professor {
-	private String id_professor;
+	private int id_professor;
 	private String nome_professor;
-	
-	public String getIdProfessor() {
+	public int getId_professor() {
 		return id_professor;
 	}
-	public void setIdProfessor(String id) {
+	public void setId_professor(int id_professor) {
 		this.id_professor = id_professor;
 	}
-	
-	public String getNomeProfessor() {
+	public String getNome_professor() {
 		return nome_professor;
 	}
-	public void setNomeProfessor(String email) {
+	public void setNome_professor(String nome_professor) {
 		this.nome_professor = nome_professor;
 	}
+	
+	
 
 }
