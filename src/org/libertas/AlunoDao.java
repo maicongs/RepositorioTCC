@@ -17,6 +17,7 @@ public class AlunoDao {
 			aluno.setInt(3, a.getId_curso());
 			aluno.setInt(4, a.getRa());
 			aluno.execute();
+			// execução da submissao
 			
 			con.getConexao().close();
 			
