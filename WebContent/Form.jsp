@@ -112,7 +112,7 @@
 			<input type="radio" name="confirmacao" value="<%= confirmacao %>"> Não
 			</br>
 			
-			<input type="submit" class="btn btn-success" value="Salvar"/>
+			<input type="submit" class="btn btn-primary" value="Salvar"/>
 			<a href="Index.jsp" class="btn btn-danger">Voltar</a>		
 		</aside>	
 		</form>
