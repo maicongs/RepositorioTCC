@@ -5,16 +5,18 @@ import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.catalina.connector.Request;
+
 public class CursoDao {
     public void submissao(Curso c) {
     	try {
 			Conexao con = new Conexao();
-			String sql = "INSERT INTO curso (id_curso, nome_curso,"
-					+ " VALUES (?, ?,))";
+			String sql = "INSERT INTO curso (id_curso, curso)"
+					+ " VALUES (?, ?)";
 			PreparedStatement curso = con.getConexao().prepareStatement(sql);
 			
 			curso.setInt(1, c.getId_curso());
-			curso.setString(2, c.getNome_curso());
+			curso.setString(2, c.getCurso());
 			curso.execute();
 			
 			con.getConexao().close();
@@ -34,7 +36,7 @@ public class CursoDao {
 				ResultSet res = sta.executeQuery(sql);
 				if(res.next()) {
 					c.setId_curso(res.getInt("id_curso"));
-					c.setNome_curso(res.getString("nome_curso"));
+					c.setCurso(res.getString("curso"));
 				}
 				
 				con.getConexao().close();
@@ -50,11 +52,11 @@ public class CursoDao {
 			Conexao con = new Conexao();
 			String sql = "UPDATE curso"
 					+ " SET id_curso = ?,"
-					+ "nome_curso = ?,"
+					+ "curso = ?,"
 					+ "WHERE idcurso = ?";
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 			prep.setInt(1, c.getId_curso());
-			prep.setString(2, c.getNome_curso());
+			prep.setString(2, c.getCurso());
 			prep.execute();
 			
 			con.getConexao().close();
@@ -66,14 +68,15 @@ public class CursoDao {
 	public List<Curso> listar(){
 		List <Curso> dados = new LinkedList<Curso>();
 		try {
-			String sql = "SELECT * FROM curso "
-					+ "ORDER BY id_curso DESC LIMIT 1";
+			String sql = "SELECT * FROM cursos "
+					+ "ORDER BY id_curso";
 			Conexao con = new Conexao();
 			Statement sta = con.getConexao().createStatement();
 			ResultSet res = sta.executeQuery(sql);
 			while(res.next()) {
 				Curso c = new Curso();
-				c.setNome_curso(res.getString("nome_curso"));
+				c.setCurso(res.getString("curso"));
+				c.setId_curso(res.getInt("id_curso"));
 				dados.add(c);
 			}
 			con.getConexao().close();

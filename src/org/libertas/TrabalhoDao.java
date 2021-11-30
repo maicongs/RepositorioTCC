@@ -13,8 +13,8 @@ public class TrabalhoDao {
 		try {
 			Conexao con = new Conexao();
 			String sql = "INSERT INTO trabalho (titulo, resumo, palavra_chave1, palavra_chave2, palavra_chave3, "
-					+ " palavra_chave4, palavra_chave5, situacao, confirmacao, id_professor, id_curso, ra_aluno"
-					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?))";
+					+ " palavra_chave4, palavra_chave5, situacao, confirmacao, id_professor, id_curso, ra_aluno)"
+					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement trab = con.getConexao().prepareStatement(sql);
 			trab.setString(1, t.getTitulo());
 			trab.setString(2, t.getResumo());
@@ -25,9 +25,9 @@ public class TrabalhoDao {
 			trab.setString(7, t.getPalavra_chave5());
 			trab.setString(8, t.getSituacao());
 			trab.setString(9, t.getConfirmacao());
-			trab.setInt(10, 1);
-			trab.setInt(11, 1);
-			trab.setInt(12, 1);
+			trab.setInt(10, t.getId_professor());
+			trab.setInt(11, t.getId_curso());
+			trab.setInt(12, t.getRa_aluno());
 			trab.execute();
 			
 			con.getConexao().close();
@@ -57,8 +57,8 @@ public class TrabalhoDao {
 				t.setSituacao(resultado.getString("situacao"));
 				t.setConfirmacao(resultado.getString("confirmacao"));
 				t.setId_professor(resultado.getInt("id_professor"));
-				t.setId_curso(resultado.getInt("id|_curso"));
-				t.setRa_aluno(resultado.getInt("ra_aluno"));
+				t.setId_curso(resultado.getInt("id_curso"));
+				t.setRa_aluno(resultado.getInt("ra"));
 			}
 			
 			con.getConexao().close();
