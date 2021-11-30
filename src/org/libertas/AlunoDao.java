@@ -9,8 +9,8 @@ public class AlunoDao {
     public void submissao(Aluno a) {
     	try {
 			Conexao con = new Conexao();
-			String sql = "INSERT INTO aluno (nome, email, id_curso, ra,"
-					+ " VALUES (?, ?, ?, ?,))";
+			String sql = "INSERT INTO aluno (nome, email, id_curso, ra)"
+					+ " VALUES (?, ?, ?, ?)";
 			PreparedStatement aluno = con.getConexao().prepareStatement(sql);
 			aluno.setString(1, a.getNome());
 			aluno.setString(2, a.getEmail());

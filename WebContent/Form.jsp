@@ -1,3 +1,7 @@
+<%@page import="org.libertas.Professor"%>
+<%@page import="org.libertas.ProfessorDao"%>
+<%@page import="org.libertas.Curso"%>
+<%@page import="org.libertas.CursoDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -52,30 +56,39 @@
 				<br/>
 		
 				<labeL class="form-label">Curso:</labeL>
-					<select class="form-select" name="curso" value="<%= id_curso %>">Curso
-						<option value="0" selected>Selecione o curso</option>
-						<option value="1">Administração</option>
-						<option>Ciencias Contábeis</option>
-						<option>Direito</option>
-						<option>Enfermagem</option>
-						<option>Engenharia Civil</option>
-						<option>Engenharia de Produção</option>
-						<option>Pedagogia</option>
-						<option>Psicologia</option>
-						<option>Sistemas de Informação</option>
-						<option>Odontologia</option>
-			
+						<select name="id_curso" class="form-select" aria-label="Default select example">
+							<%
+								CursoDao cdao = new CursoDao();
+								for (Curso c: cdao.listar()){
+									String sel = "";
+									if (c.equals(sel)){  
+										sel = " SELECTED ";
+									}
+									out.print("<option value="+c.getId_curso()+sel+">");
+									out.print(c.getCurso());
+									out.print("</option>");
+							}
+
+							%>
 						</select>
-						</br>
+						<br>
 		
 				<labeL class="form-label">Orientador:</labeL>
-					<select class="form-select" value="<%= id_professor %>">Orientador
-						<option selected>Selecione o orientador</option>
-						<option>Alysson</option>
-						<option>Dorival</option>
-						<option>Ely</option>
-						<option>Fernando</option>
-					</select>
+					<select name="id_professor" class="form-select" aria-label="Default select example">
+							<%
+								ProfessorDao pdao = new ProfessorDao();
+								for (Professor p: pdao.listar()){
+									String sel = "";
+									if (p.equals(sel)){  
+										sel = " SELECTED ";
+									}
+									out.print("<option value="+p.getId_professor()+sel+">");
+									out.print(p.getNome_professor());
+									out.print("</option>");
+							}
+
+							%>
+						</select>
 					</br>
 		
 				<label class="form-label">Titulo:</label>
@@ -108,8 +121,8 @@
 			<label class="form-label">
 			<span class="h5"><strong>O trabalho pode ser postado?</strong></span>
 			</label>
-			<input type="radio" name="confirmacao" value="<%= confirmacao %>"> Sim
-			<input type="radio" name="confirmacao" value="<%= confirmacao %>"> Não
+			<input type="radio" name="confirmacao" value="S"> Sim
+			<input type="radio" name="confirmacao" value="N"> Não
 			</br>
 			
 			<input type="submit" class="btn btn-primary" value="Salvar"/>

@@ -42,6 +42,22 @@ public class EnvioUpload extends HttpServlet {
 			// salva o arquivo
 			filePart.write(pasta + fileName);
 			
+			AlunoDao adao = new AlunoDao();
+			Aluno a = new Aluno();
+			
+			a.setRa(Integer.parseInt(request.getParameter("ra")));
+			a.setNome(request.getParameter("nome"));
+			a.setEmail(request.getParameter("email"));
+			a.setId_curso(Integer.parseInt(request.getParameter("id_curso")));
+			
+			Aluno a2 = adao.consultarAluno(a.getRa());
+			if (a.getRa() == a2.getRa()) {
+				adao.atualizarAluno(a);
+			} else {
+				adao.submissao(a);
+			}
+			
+			
 			TrabalhoDao tdao = new TrabalhoDao();
 			Trabalho t = new Trabalho();
 			
@@ -50,16 +66,27 @@ public class EnvioUpload extends HttpServlet {
 			t.setPalavra_chave3(request.getParameter("palavra_chave3"));
 			t.setPalavra_chave4(request.getParameter("palavra_chave4"));
 			t.setPalavra_chave5(request.getParameter("palavra_chave5"));
-			t.setConfirmacao(request.getParameter("confirmacao"));
 			t.setTitulo(request.getParameter("titulo"));
-			t.setSituacao(request.getParameter("situacao"));
+			t.setSituacao("P");
+			t.setConfirmacao(request.getParameter("confirmacao"));
 			t.setResumo(request.getParameter("resumo"));
-			t.setId_curso(Integer.parseInt(request.getParameter("curso")));
+			t.setId_curso(Integer.parseInt(request.getParameter("id_curso")));
 			t.setId_professor(Integer.parseInt(request.getParameter("id_professor")));
-			t.setRa_aluno(Integer.parseInt(request.getParameter("ra_aluno")));
+			t.setRa_aluno(Integer.parseInt(request.getParameter("ra")));
 			
 			tdao.submissaoTrabalho(t);
 			
+			CursoDao cdao = new CursoDao();
+			Curso c = new Curso();
+			
+			c.setId_curso(Integer.parseInt(request.getParameter("id_curso")));
+			c.setCurso(request.getParameter("curso"));
+			
+			ProfessorDao pdao = new ProfessorDao();
+			Professor p = new Professor();
+			
+			p.setId_professor(Integer.parseInt(request.getParameter("id_professor")));
+			p.setNome_professor(request.getParameter("nome_professor"));
 			
 			
 			
