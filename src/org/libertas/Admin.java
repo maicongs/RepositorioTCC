@@ -1,14 +1,14 @@
 package org.libertas;
 
 public class Admin {
-	private String id_admin;
+	private int id_admin;
 	private String email;
 	private String senha;
 	
-	public String getIdAdmin() {
+	public int getId_Admin() {
 		return id_admin;
 	}
-	public void setIdAdmin(String id) {
+	public void setId_Admin(int id) {
 		this.id_admin = id_admin;
 	}
 	
@@ -23,6 +23,9 @@ public class Admin {
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public String getLogin() {
+		return null;
 	}
 
 }
