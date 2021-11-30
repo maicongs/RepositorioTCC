@@ -9,7 +9,7 @@
 <link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
 <body class="p-3 mb-2 text-black" style="background-color:#90EE90">
-	
+	 <div class="container">  
 		<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#32CD32">
 			<img src="logo.png" width="250px" height="150px">
 			<span class="display-4"><strong>Libertas Repositório de Trabalhos</strong></span>
@@ -21,14 +21,51 @@
 	            	<a class="nav-link" style="padding-right: 30px; font-size: 25px; font-weight: bold; color: white" href="AprovacaoTrabalho.jsp">Entrar</a>
 	          	</li>
           	 </ul>
-          	
-          </nav>
-    <div class="container">     
-		<form class="form-inline my-2 my-lg-0">
-	          <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search">
-	          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-	    </form>    
+         </nav>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+ 	<form class="form-inline">
+    	 <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Pesquisar" style="width: 600px; position:relative; left:50%; margin-left: -300px">
+   		 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="position: absolute; left: 630px">Pesquisar</button>
+  	</form>
+  	<br>
+  	<br>
+  	<br>
+  	<div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Título</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id faucibus neque, porta vehicula est. 
+            In consequat velit lectus, et sodales metus dictum eu. Phasellus dapibus pellentesque dictum. Duis ac vulputate quam. 
+            Suspendisse imperdiet mi at bibendum lacinia. Vivamus leo lacus, molestie et porta at, feugiat eget ipsum. Sed eget.<a class="nav-link" 
+            style= "color: blue" href="#">Ler mais...</a> </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Título</h2>
+            <p>onec elementum diam nisi, non vestibulum magna eleifend non. Aenean tristique finibus lacinia. Vestibulum faucibus lectus tellus, 
+            at auctor sem bibendum non. Suspendisse efficitur velit est, quis aliquam urna pellentesque a. Nam iaculis dolor lectus, sit 
+            amet laoreet mauris facilisis non. Cras sem nulla, pretium et condimentum vel, fringilla placerat.<a class="nav-link" 
+            style= "color: blue" href="#">Ler mais...</a> </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Título</h2>
+            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis maximus sodales mi, eget 
+            feugiat dui rutrum et. Etiam lobortis laoreet ligula, et pulvinar erat aliquam fermentum. Cras accumsan lacus nisl, quis
+             ornare nibh viverra ac. Aliquam erat volutpat. Nulla euismod nisl id velit aliquam, mattis tincidunt.<a class="nav-link" 
+            style= "color: blue" href="#">Ler mais...</a> </p>
+          </div>
+        
+          <div class="card-footer text-muted" style="text-align: center">
+    			&copy; Desenvolvido por: André | Maicon | Nathan
+    			<br>
+    			Libertas Faculdades Integradas - 2021
+  		  </div>
 	
 	
 	<script src="js/bootstrap.min.js"></script>
