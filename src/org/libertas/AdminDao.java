@@ -27,11 +27,11 @@ public class AdminDao {
 			
 			ResultSet resultado = sta.executeQuery(sql);
 			
-			if (resultado == null) {
-				System.out.println("login ou senha inválido");
+			if (resultado.next()) {
+				System.out.println("login efetuado com sucesso");
 			}
 			else {
-				resultado.next();
+				System.out.println("login ou senha inválido");
 			}
 			
 			con.getConexao().close();

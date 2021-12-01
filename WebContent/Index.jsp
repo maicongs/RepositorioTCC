@@ -20,8 +20,6 @@
 
 	admin.setEmail(request.getParameter("email"));
 	admin.setSenha(request.getParameter("senha"));
-	
-	admindao.submissao(admin);
 
 %>
 	 <div class="container">  
