@@ -27,11 +27,11 @@ public class AlunoDao {
 		
 	}
 	
-	public Aluno consultarAluno(int ra_aluno) {
+	public Aluno consultarAluno(int ra) {
 		Aluno a = new Aluno();
 		try {
 			Conexao con = new Conexao();
-			String sql = "SELECT * FROM aluno WHERE id_aluno = " + ra_aluno;
+			String sql = "SELECT * FROM aluno WHERE ra = " + ra;
 			
 			Statement sta = con.getConexao().createStatement();
 			ResultSet resultado = sta.executeQuery(sql);

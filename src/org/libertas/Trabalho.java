@@ -14,8 +14,15 @@ public class Trabalho {
 	private int id_professor;
 	private int id_curso;
 	private int ra_aluno;
+	private String arquivo;
 	
 	
+	public String getArquivo() {
+		return arquivo;
+	}
+	public void setArquivo(String arquivo) {
+		this.arquivo = arquivo;
+	}
 	public void setId_trabalho(int id_trabalho) {
 		this.id_trabalho = id_trabalho;
 	}

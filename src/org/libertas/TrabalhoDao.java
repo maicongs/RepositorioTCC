@@ -13,8 +13,8 @@ public class TrabalhoDao {
 		try {
 			Conexao con = new Conexao();
 			String sql = "INSERT INTO trabalho (titulo, resumo, palavra_chave1, palavra_chave2, palavra_chave3, "
-					+ " palavra_chave4, palavra_chave5, situacao, confirmacao, id_professor, id_curso, ra_aluno)"
-					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+					+ " palavra_chave4, palavra_chave5, situacao, confirmacao, id_professor, id_curso, ra_aluno, arquivo)"
+					+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement trab = con.getConexao().prepareStatement(sql);
 			trab.setString(1, t.getTitulo());
 			trab.setString(2, t.getResumo());
@@ -28,6 +28,7 @@ public class TrabalhoDao {
 			trab.setInt(10, t.getId_professor());
 			trab.setInt(11, t.getId_curso());
 			trab.setInt(12, t.getRa_aluno());
+			trab.setString(13, t.getArquivo());
 			trab.execute();
 			
 			con.getConexao().close();
@@ -59,6 +60,7 @@ public class TrabalhoDao {
 				t.setId_professor(resultado.getInt("id_professor"));
 				t.setId_curso(resultado.getInt("id_curso"));
 				t.setRa_aluno(resultado.getInt("ra"));
+				t.setArquivo(resultado.getString("arquivo"));
 			}
 			
 			con.getConexao().close();
@@ -83,6 +85,7 @@ public class TrabalhoDao {
 					+ " palavra_chave5 = ?,"
 					+ " situacao = ?"
 					+ " confirmacao = ?"
+					+ " arquivo = ?"
 					+ " WHERE id_trabalho = ?";
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 			prep.setString(1, t.getTitulo());
@@ -94,6 +97,7 @@ public class TrabalhoDao {
 			prep.setString(7, t.getPalavra_chave5());
 			prep.setString(8, t.getSituacao());
 			prep.setString(9, t.getConfirmacao());
+			prep.setString(10, t.getArquivo());
 			prep.execute();
 			
 			

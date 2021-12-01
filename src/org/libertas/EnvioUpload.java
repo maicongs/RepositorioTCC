@@ -73,6 +73,7 @@ public class EnvioUpload extends HttpServlet {
 			t.setId_curso(Integer.parseInt(request.getParameter("id_curso")));
 			t.setId_professor(Integer.parseInt(request.getParameter("id_professor")));
 			t.setRa_aluno(Integer.parseInt(request.getParameter("ra")));
+			t.setArquivo(fileName);
 			
 			tdao.submissaoTrabalho(t);
 			
