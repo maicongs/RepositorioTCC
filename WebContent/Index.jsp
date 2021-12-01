@@ -1,3 +1,6 @@
+<%@page import="org.libertas.Admin"%>
+<%@page import="org.libertas.AdminDao"%>
+<%@page import="org.libertas.RealizaLogin"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,6 +12,18 @@
 <link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
 <body class="p-3 mb-2 text-black" style="background-color:#90EE90">
+<%
+
+    AdminDao admindao = new AdminDao();
+	Admin admin = new Admin();
+	
+
+	admin.setEmail(request.getParameter("email"));
+	admin.setSenha(request.getParameter("senha"));
+	
+	admindao.submissao(admin);
+
+%>
 	 <div class="container">  
 		<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#32CD32">
 			<img src="logo.png" width="250px" height="150px">
