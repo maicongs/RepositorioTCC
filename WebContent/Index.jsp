@@ -66,6 +66,8 @@
     			<br>
     			Libertas Faculdades Integradas - 2021
   		  </div>
+  		</div>
+  	</div>
 	
 	
 	<script src="js/bootstrap.min.js"></script>
