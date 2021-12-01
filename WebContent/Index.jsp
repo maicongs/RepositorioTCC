@@ -8,87 +8,66 @@
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 <link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
-<body>
-	<div class="container">
-		<form action="Repositorio" enctype="multipart/form-data" method="post">
-		<div class="p-3 mb-2 text-black" style="background-color:#90EE90">
-			<div class="p-3 mb-2 text-black">
-				<nav class="navbar navbar-expand" style="background-color:#32CD32">
-				<img src="logo.png" width="200px" height="100px">
-				<span class="display-3">Libertas Repositório de Trabalhos</span>
-				<div class="collapse navbar-collapse">
-					<ul class="list-group list-group-flush">
-						<li class="list-group-item">
-							<a class="nav-link" style="color: black" href="Form.jsp">Submissão</a>
-						</li>
-						<li class="list-group-item">
-							<a class="nav-link" style="color: black" href="AprovacaoTrabalho.jsp">Entrar</a>
-						</li>
-					</ul>	
-				</div>
-				</nav>
-			</div>
-			<div class="row">
-				<div role="main" class="col-md-3">
-					<nav class="nav flex-column">
-					<form class="form-inline">
-						<input class="form-control mr-sm-2" type="search" placeholder="Buscar...">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-					</form>
-					<span class="navbar-text">Filtros</span>
-					<div class="dropdown">
-						<button class= "btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Curso</button>
-										
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							 <a class="dropdown-item" href="#">Alguma ação</a>
-							 <a class="dropdown-item" href="#">Outra ação</a>
-							 <a class="dropdown-item" href="#">Alguma coisa aqui</a>
-						</div>
-					</div>
-					</br>
-					<div class="dropdown">
-						<button class= "btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Orientador
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Alguma ação</a>
-							<a class="dropdown-item" href="#">Outra ação</a>
-							<a class="dropdown-item" href="#">Alguma coisa aqui</a>
-						</div>
-					</div>
-					</br>
-					<div class="dropdown">
-						<button class= "btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Ano
-						</button>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a class="dropdown-item" href="#">Alguma ação</a>
-							<a class="dropdown-item" href="#">Outra ação</a>
-							<a class="dropdown-item" href="#">Alguma coisa aqui</a>
-						</div>
-					</div>
-					</br>
-					<button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					Autor
-					</button>
-					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<input class="form-control mr-sm-2" type="search" placeholder="Buscar...">
-					</div>
-					</nav>
-				</div>	
-			</div>
-			</div>
-			<aside role="complementary" class="col-md-5">
-				<div class="media">
-	  				<div class="media-body">
-	    				<h5 class="mt-0 mb-1">Objeto mídia</h5>
-	    					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-	  				</div>
-			   </div>
-			</aside>
-			</form>
-		</div>
+<body class="p-3 mb-2 text-black" style="background-color:#90EE90">
+	 <div class="container">  
+		<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#32CD32">
+			<img src="logo.png" width="250px" height="150px">
+			<span class="display-4"><strong>Libertas Repositório de Trabalhos</strong></span>
+			 <ul class="navbar-nav mr-auto">
+	          	 <li class="nav-item">
+	            	<a class="nav-link" style="padding-left:50px; font-size: 25px; font-weight: bold; color: white" href="Form.jsp">Submissão</a>
+	             </li>
+	          	<li class="nav-item">
+	            	<a class="nav-link" style="padding-right: 30px; font-size: 25px; font-weight: bold; color: white" href="AprovacaoTrabalho.jsp">Entrar</a>
+	          	</li>
+          	 </ul>
+         </nav>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+ 	<form class="form-inline">
+    	 <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Pesquisar" style="width: 600px; position:relative; left:50%; margin-left: -300px">
+   		 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" style="position: absolute; left: 630px">Pesquisar</button>
+  	</form>
+  	<br>
+  	<br>
+  	<br>
+  	<div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Título</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id faucibus neque, porta vehicula est. 
+            In consequat velit lectus, et sodales metus dictum eu. Phasellus dapibus pellentesque dictum. Duis ac vulputate quam. 
+            Suspendisse imperdiet mi at bibendum lacinia. Vivamus leo lacus, molestie et porta at, feugiat eget ipsum. Sed eget.<a class="nav-link" 
+            style= "color: blue" href="#">Ler mais...</a> </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Título</h2>
+            <p>onec elementum diam nisi, non vestibulum magna eleifend non. Aenean tristique finibus lacinia. Vestibulum faucibus lectus tellus, 
+            at auctor sem bibendum non. Suspendisse efficitur velit est, quis aliquam urna pellentesque a. Nam iaculis dolor lectus, sit 
+            amet laoreet mauris facilisis non. Cras sem nulla, pretium et condimentum vel, fringilla placerat.<a class="nav-link" 
+            style= "color: blue" href="#">Ler mais...</a> </p>
+          </div>
+          <div class="col-md-4">
+            <h2>Título</h2>
+            <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis maximus sodales mi, eget 
+            feugiat dui rutrum et. Etiam lobortis laoreet ligula, et pulvinar erat aliquam fermentum. Cras accumsan lacus nisl, quis
+             ornare nibh viverra ac. Aliquam erat volutpat. Nulla euismod nisl id velit aliquam, mattis tincidunt.<a class="nav-link" 
+            style= "color: blue" href="#">Ler mais...</a> </p>
+          </div>
+        
+          <div class="card-footer text-muted" style="text-align: center">
+    			&copy; Desenvolvido por: André | Maicon | Nathan
+    			<br>
+    			Libertas Faculdades Integradas - 2021
+  		  </div>
+  		</div>
+  	</div>
 	
 	
 	<script src="js/bootstrap.min.js"></script>

@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Confirma que o trabalho será postado</title>
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
 <body>
 
