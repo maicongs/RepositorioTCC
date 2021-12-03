@@ -1,15 +1,15 @@
-<<<<<<< Updated upstream
+
 <%@page import="org.libertas.Admin"%>
 <%@page import="org.libertas.AdminDao"%>
 <%@page import="org.libertas.RealizaLogin"%>
-=======
+
 <%@page import="org.libertas.ProfessorDao"%>
 <%@page import="org.libertas.Professor"%>
 <%@page import="org.libertas.Aluno"%>
 <%@page import="org.libertas.AlunoDao"%>
 <%@page import="org.libertas.Trabalho"%>
 <%@page import="org.libertas.TrabalhoDao"%>
->>>>>>> Stashed changes
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 <link type="text/css" rel="stylesheet" href="css/all.min.css" />
 </head>
-<<<<<<< Updated upstream
+
 <body class="p-3 mb-2 text-black" style="background-color:#90EE90">
 <%
 
@@ -45,24 +45,6 @@
 	          	</li>
           	 </ul>
          </nav>
-=======
-<body class="p-3 mb-2 text-black" style="background-color: #90EE90">
-	<div class="container">
-		<nav class="navbar navbar-expand-md navbar-light fixed-top"
-			style="background-color: #32CD32">
-			<img src="logo.png" width="250px" height="150px"> <span
-				class="display-4"><strong>Libertas Repositório de
-					Trabalhos</strong></span>
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"><a class="nav-link"
-					style="padding-left: 50px; font-size: 25px; font-weight: bold; color: white"
-					href="Form.jsp">Submissão</a></li>
-				<li class="nav-item"><a class="nav-link"
-					style="padding-right: 30px; font-size: 25px; font-weight: bold; color: white"
-					href="AprovacaoTrabalho.jsp">Entrar</a></li>
-			</ul>
-		</nav>
->>>>>>> Stashed changes
 	</div>
 	<br>
 	<br>
@@ -98,6 +80,9 @@
 				<p><%= p.getNome_professor() %></p>
 				<p><%= t.getPalavra_chave1() %></p>
 				<p>Resumo: <%=t.getResumo()%></p>
+
+				<p><a href="../arquivosGrupo2/<%= t.getArquivo() %>">Dowload</a></p>
+
 				
 				<a class="nav-link" style="color: blue" href="#">Ler mais...</a>
 				</p>
