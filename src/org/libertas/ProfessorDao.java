@@ -28,7 +28,7 @@ public class ProfessorDao {
 			Professor p = new Professor();
 			try {
 				Conexao con = new Conexao();
-				String sql = "SELECT * FROM professor WHERE idprofessor = " + id_professor;
+				String sql = "SELECT * FROM professor WHERE id_professor = " + id_professor;
 				Statement sta = con.getConexao().createStatement();
 				ResultSet res = sta.executeQuery(sql);
 				if(res.next()) {
