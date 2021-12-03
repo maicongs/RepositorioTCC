@@ -127,6 +127,7 @@ public class TrabalhoDao {
 				t.setPalavra_chave1(resultado.getString("palavra_chave1"));
 				t.setPalavra_chave1(resultado.getString("palavra_chave2"));
 				t.setPalavra_chave1(resultado.getString("palavra_chave3"));
+				t.setArquivo(resultado.getString("arquivo"));
 				dados.add(t);
 			}
 			

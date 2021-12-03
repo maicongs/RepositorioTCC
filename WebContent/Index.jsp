@@ -98,6 +98,7 @@
 				<p><%= p.getNome_professor() %></p>
 				<p><%= t.getPalavra_chave1() %></p>
 				<p>Resumo: <%=t.getResumo()%></p>
+				<p><a href="../arquivosGrupo2/<%= t.getArquivo() %>">Dowload</a></p>
 				
 				<a class="nav-link" style="color: blue" href="#">Ler mais...</a>
 				</p>
