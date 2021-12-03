@@ -1,6 +1,9 @@
 package org.libertas;
 
 public class Trabalho {
+	public int getId_trabalho() {
+		return id_trabalho;
+	}
 	private int id_trabalho;
 	private String titulo;
 	private String resumo;
