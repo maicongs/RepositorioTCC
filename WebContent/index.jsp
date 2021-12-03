@@ -21,30 +21,23 @@
 <link type="text/css" rel="stylesheet" href="css/all.min.css" />
 </head>
 
-<body class="p-3 mb-2 text-black" style="background-color:#90EE90">
-<%
+<body class="p-3 mb-2 text-black" style="background-color: #90EE90">
 
-    AdminDao admindao = new AdminDao();
-	Admin admin = new Admin();
-	
-
-	admin.setEmail(request.getParameter("email"));
-	admin.setSenha(request.getParameter("senha"));
-
-%>
-	 <div class="container">  
-		<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#32CD32">
-			<img src="logo.png" width="250px" height="150px">
-			<span class="display-4"><strong>Libertas Repositório de Trabalhos</strong></span>
-			 <ul class="navbar-nav mr-auto">
-	          	 <li class="nav-item">
-	            	<a class="nav-link" style="padding-left:50px; font-size: 25px; font-weight: bold; color: white" href="Form.jsp">Submissão</a>
-	             </li>
-	          	<li class="nav-item">
-	            	<a class="nav-link" style="padding-right: 30px; font-size: 25px; font-weight: bold; color: white" href="AprovacaoTrabalho.jsp">Entrar</a>
-	          	</li>
-          	 </ul>
-         </nav>
+	<div class="container">
+		<nav class="navbar navbar-expand-md navbar-light fixed-top"
+			style="background-color: #32CD32">
+			<img src="logo.png" width="250px" height="150px"> <span
+				class="display-4"><strong>Libertas Repositório de
+					Trabalhos</strong></span>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link"
+					style="padding-left: 50px; font-size: 25px; font-weight: bold; color: white"
+					href="Form.jsp">Submissão</a></li>
+				<li class="nav-item"><a class="nav-link"
+					style="padding-right: 30px; font-size: 25px; font-weight: bold; color: white"
+					href="AprovacaoTrabalho.jsp">Entrar</a></li>
+			</ul>
+		</nav>
 	</div>
 	<br>
 	<br>
@@ -76,15 +69,15 @@
 			%>
 			<div class="col-md-4">
 				<h3><%=t.getTitulo()%></h3>
-				<p><%= a.getNome() %></p>
-				<p><%= p.getNome_professor() %></p>
-				<p><%= t.getPalavra_chave1() %></p>
-				<p>Resumo: <%=t.getResumo()%></p>
+				<p>Nome: <%=a.getNome()%></p>
+				<p>Orientador: <%=p.getNome_professor()%></p>
+				<p>
+					Resumo:
+					<%=t.getResumo()%></p>
 
-				<p><a href="../arquivosGrupo2/<%= t.getArquivo() %>">,
-
-				
-				<a class="nav-link" style="color: blue" href="#">Ler mais...</a>
+				<p>
+					<a href="../arquivosGrupo2/<%=t.getArquivo()%>"><a
+						class="nav-link" style="color: blue" href="#">Ler mais...</a>
 				</p>
 			</div>
 

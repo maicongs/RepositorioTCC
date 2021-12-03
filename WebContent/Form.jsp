@@ -115,7 +115,7 @@
 					</label> <input type="radio" name="confirmacao" value="S"> Sim <input
 						type="radio" name="confirmacao" value="N"> Não </br> 
 						<input type="submit"class="btn btn-primary" value="Salvar"/>
-					<a href="Index.jsp" class="btn btn-danger">Voltar</a>
+					<a href="index.jsp" class="btn btn-danger">Voltar</a>
 				</aside>
 				<div class="card-footer text-muted" style="text-align: center">
 					&copy; Desenvolvido por: André | Maicon | Nathan <br> Libertas
@@ -125,7 +125,6 @@
 	</div>
 
 	<script src="js/bootstrap.min.js"></script>
-<<<<<<< Updated upstream
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	

@@ -111,7 +111,7 @@ public class TrabalhoDao {
 		try {
 			Conexao con = new Conexao();
 			String sql = "UPDATE trabalho"
-					+ " SET situacao = 'C' WHERE id_trabalho = "+ id_trabalho;
+					+ " SET situacao = 'c' WHERE id_trabalho = "+ id_trabalho;
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 			
 			prep.execute();
@@ -144,7 +144,7 @@ public class TrabalhoDao {
 	public List<Trabalho> listarTrabalho(){
 		List <Trabalho> dados = new LinkedList<Trabalho>();
 		try {
-			String sql = "SELECT * FROM trabalho WHERE situacao = 'C' ORDER BY id_trabalho DESC LIMIT 3";
+			String sql = "SELECT * FROM trabalho WHERE situacao = 'c' ORDER BY id_trabalho DESC LIMIT 3";
 			Conexao con = new Conexao();
 			Statement sta = con.getConexao().createStatement();
 			ResultSet resultado = sta.executeQuery(sql);

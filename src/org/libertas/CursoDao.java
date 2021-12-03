@@ -8,30 +8,13 @@ import java.util.List;
 import org.apache.catalina.connector.Request;
 
 public class CursoDao {
-    public void submissao(Curso c) {
-    	try {
-			Conexao con = new Conexao();
-			String sql = "INSERT INTO curso (id_curso, curso)"
-					+ " VALUES (?, ?)";
-			PreparedStatement curso = con.getConexao().prepareStatement(sql);
-			
-			curso.setInt(1, c.getId_curso());
-			curso.setString(2, c.getCurso());
-			curso.execute();
-			
-			con.getConexao().close();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-	}
+
 	
 	public Curso consultarCurso(int id_curso) {
 			Curso c = new Curso();
 			try {
 				Conexao con = new Conexao();
-				String sql = "SELECT * FROM curso WHERE idcurso = " + id_curso;
+				String sql = "SELECT * FROM curso WHERE id_curso = " + id_curso;
 				Statement sta = con.getConexao().createStatement();
 				ResultSet res = sta.executeQuery(sql);
 				if(res.next()) {

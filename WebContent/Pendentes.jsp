@@ -65,6 +65,7 @@
 		%>
 	</table>
 	</div>
+	<a href="index.jsp" class="btn btn-danger">Voltar</a>
 	
 	
 	<script src="js/bootstrap.min.js"></script>

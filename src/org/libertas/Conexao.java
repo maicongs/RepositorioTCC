@@ -9,7 +9,7 @@ public class Conexao {
 		public Conexao() {
 			try {
 				Class.forName("org.mariadb.jdbc.Driver").newInstance();
-				String url = "jdbc:mariadb://192.168.1.178:30003/reidelas";
+				String url = "jdbc:mariadb://186.248.131.178:30003/reidelas";
 				conexao = DriverManager.getConnection(url, "grupo2", "AsBolasSaoQuadradas.2");
 
 			} catch (Exception e) {
