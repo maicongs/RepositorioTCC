@@ -4,51 +4,46 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Trabalhos Pendentes</title>
-<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
-<link type="text/css" rel="stylesheet" href="css/all.min.css"/>
+<title>Lista de trabalhos pendentes</title>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
-<body class="p-3 mb-2 text-black" style="background-color:#90EE90">
-	<div>
-		<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color:#32CD32">
-			<img src="logo.png" width="250px" height="150px">
-			<span class="display-4"><strong>Libertas Repositório de Trabalhos</strong></span>
-			<a class="nav-link" style="padding-left: 120px; font-size: 25px; font-weight: bold; color: white" href="AprovacaoPostagem.jsp">Voltar</a>
+<body>
+	<div class="container"/>
+	<h1>Trabalhos Pendentes</h1>
+		
+	<table class="table table-striped table-hover"/>
+
+		<th>Titulo</th>
+		<th>Aluno</th>
+		<th>Professor</th>
+		<th>Resumo</th>
+
+
+		<jsp:useBean id="tdao" class="org.libertas.TrabalhoDao" scope="page" />
+		<c:forEach var="t" items="${tdao.listarTrabalho()}">
+			<tr>
+				<td>${t.titulo}</td>
+				<td>${f.id_fornecedor}</td>
+				<td>${f.endereco}</td>
+				<td>${f.cnpj}</td>
+				<td><a href="formularioFornecedor.jsp?id_fornecedor=${f.id_fornecedor}" class="btn btn-primary">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</svg>
+					</a>
+					<a href="excluirFornecedor.jsp?id_fornecedor=${f.id_fornecedor}" class="btn btn-danger">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+</svg>
+					</a>
+					</td>
+
+			</tr>
+
+		</c:forEach>
+	</table>
 	</div>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<div class="container">
-		<h3 type="text" style="position: absolute; left: 630px">Pendências</h3>
-		<br>
-		<br>
-		<br>
-		<div class="collapse.show" id="collapse">
-			<h2>TITULO</h2>
-			<h3>Autor: <!-- mostra o nome do autor --> -------------------------------Curso: <!-- mostra o curso --></h3>
-			<h3>Orientador: <!-- adiciona o nome do orientador -->-----------------------------Palavras-chave: 
-			<!-- mostra as tres primeiras palavras chaves --> ----------; ----------; -----------</h3>
-			<h4>Resumo:</h4>
-			
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id faucibus neque, porta vehicula est. 
-	            In consequat velit lectus, et sodales metus dictum eu. Phasellus dapibus pellentesque dictum. Duis ac vulputate quam. 
-	            Suspendisse imperdiet mi at bibendum lacinia. Vivamus leo lacus, molestie et porta at, feugiat eget ipsum. Sed eget.</p>
-        </div>
-        <button class="btn btn-outline-primary" data-toggle="collapse" data-target="#collapse" aria-expanded="false"  style="margin-left:500px">Aprovar</button>
-        <button class="btn btn-outline-danger" data-toggle="collapse" data-target="#collapse" aria-expanded="false"  style="margin-right:400px">Rejeitar</button>
-	</div>
-	<br>
-	<br><br>
-	<div class="card-footer text-muted" style="text-align: center">
-    	&copy; Desenvolvido por: André | Maicon | Nathan
-    	<br>
-    	Libertas Faculdades Integradas - 2021
-  	</div>
-  		
 	
 	
 	<script src="js/bootstrap.min.js"></script>
