@@ -35,7 +35,7 @@
 					href="Form.jsp">Submissão</a></li>
 				<li class="nav-item"><a class="nav-link"
 					style="padding-right: 30px; font-size: 25px; font-weight: bold; color: white"
-					href="AprovacaoTrabalho.jsp">Entrar</a></li>
+					href="login.jsp">Entrar</a></li>
 			</ul>
 		</nav>
 	</div>
