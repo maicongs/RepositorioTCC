@@ -1,10 +1,12 @@
 package org.libertas;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
 public class AdminDao {
-    public void submissao(Admin a) {
+/*
         	Conexao con = new Conexao();
             System.out.println("login");
             String login = a.getLogin();
@@ -16,8 +18,27 @@ public class AdminDao {
                 System.out.println("Login ou senha inválidos!");
             }
         }
-	
-	public void consultar(Admin a) {
+	*/
+	public void consultar(String email, String senha) {
+		try {
+			Conexao con = new Conexao();
+			String sql = "SELECT * FROM admin WHERE email = '"+ email +"'" + "and senha = '" + senha + "'";
+			Statement sta = con.getConexao().createStatement();
+			
+			ResultSet resultado = sta.executeQuery(sql);
+			
+			if (resultado.next()) {
+				System.out.println("login efetuado com sucesso");
+			}
+			else {
+				System.out.println("login ou senha inválido");
+			}
+			
+			con.getConexao().close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 	}
 	

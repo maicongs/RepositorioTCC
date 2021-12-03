@@ -112,7 +112,7 @@ public class TrabalhoDao {
 	public List<Trabalho> listarTrabalho(){
 		List <Trabalho> dados = new LinkedList<Trabalho>();
 		try {
-			String sql = "SELECT * FROM trabalho ORDER BY id_trabalho DESC LIMIT 1";
+			String sql = "SELECT * FROM trabalho ORDER BY id_trabalho DESC LIMIT 3";
 			Conexao con = new Conexao();
 			Statement sta = con.getConexao().createStatement();
 			ResultSet resultado = sta.executeQuery(sql);
@@ -121,6 +121,12 @@ public class TrabalhoDao {
 				t.setId_trabalho(resultado.getInt("id_trabalho"));
 				t.setTitulo(resultado.getString("titulo"));
 				t.setResumo(resultado.getString("resumo"));
+				t.setId_curso(resultado.getInt("id_curso"));
+				t.setId_professor(resultado.getInt("id_professor"));
+				t.setRa_aluno(resultado.getInt("ra_aluno"));
+				t.setPalavra_chave1(resultado.getString("palavra_chave1"));
+				t.setPalavra_chave1(resultado.getString("palavra_chave2"));
+				t.setPalavra_chave1(resultado.getString("palavra_chave3"));
 				dados.add(t);
 			}
 			
