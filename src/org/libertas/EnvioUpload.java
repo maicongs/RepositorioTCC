@@ -101,13 +101,25 @@ public class EnvioUpload extends HttpServlet {
 					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
-					+"<p>Trabalho Enviado com sucesso</p>"															  				 	
+					+"<p style=\'font-size:30px font-weight:bold\'>Trabalho Enviado com sucesso</p>"															  				 	
 					+ "</body>"
 					+ "</html>";
 					
 		} catch (Exception e) {
 			e.printStackTrace();
-			resposta = "Falha ao enviar trabalho<br>" + e.getMessage();
+			resposta = "<html>"
+					+ "<body>"
+					+"<header>"			
+					+"<nav class='navbar navbar-expand' style=\'background-color:#32CD32\'>"	
+					+"<img src=\'logo.png\' width=\'200px\' height=\'100px\'>"
+					+"<span class=\'display-3\'>Libertas Repositório de Trabalhos</span>"			
+					+"</header>"				
+					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
+					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
+					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
+					+"<p style=\'font-size:30px font-weight:bold\'>Falha ao enviar o trabalho</p>"															  				 	
+					+ "</body>"
+					+ "</html>";
 		}
 		
 		
