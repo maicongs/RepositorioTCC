@@ -30,8 +30,8 @@ public class EnvioUpload extends HttpServlet {
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
 			// define a pasta que será salvo o arquivo
-			String pasta = "/var/lib/tomcat9/webapps/arquivosGrupo2/";
-			//String pasta = "C:\\Users\\diqui\\Documents\\GitHub\\arquivosGrupo2\\";
+			//String pasta = "/var/lib/tomcat9/webapps/arquivosGrupo2/";
+			String pasta = "C:\\Users\\diqui\\Documents\\GitHub\\arquivosGrupo2\\";
 
 			// verifica se o arquivo existe
 			int i = 1;

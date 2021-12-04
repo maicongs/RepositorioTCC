@@ -158,6 +158,38 @@ public class TrabalhoDao {
 		}
 		return dados;
 	}
+	
+	public List<Trabalho> listarTodosTrabalhos() {
+		List<Trabalho> dados = new LinkedList<Trabalho>();
+		try {
+			String sql = "SELECT * FROM trabalho ORDER BY titulo";
+			Conexao con = new Conexao();
+			Statement sta = con.getConexao().createStatement();
+			ResultSet resultado = sta.executeQuery(sql);
+			while (resultado.next()) {
+				Trabalho t = new Trabalho();
+				t.setId_trabalho(resultado.getInt("id_trabalho"));
+				t.setTitulo(resultado.getString("titulo"));
+				t.setResumo(resultado.getString("resumo"));
+				t.setId_curso(resultado.getInt("id_curso"));
+				t.setId_professor(resultado.getInt("id_professor"));
+				t.setRa_aluno(resultado.getInt("ra_aluno"));
+				t.setPalavra_chave1(resultado.getString("palavra_chave1"));
+				t.setPalavra_chave1(resultado.getString("palavra_chave2"));
+				t.setPalavra_chave1(resultado.getString("palavra_chave3"));
+				t.setSituacao(resultado.getString("situacao"));
+
+				t.setArquivo(resultado.getString("arquivo"));
+
+				dados.add(t);
+			}
+
+			con.getConexao().close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dados;
+	}
 
 	public List<Trabalho> listarTrabalhop() {
 		List<Trabalho> dados = new LinkedList<Trabalho>();
@@ -197,9 +229,10 @@ public class TrabalhoDao {
 			String sql = "SELECT * FROM trabalho t " + " INNER JOIN aluno a ON t.ra_aluno = a.ra "
 					+ " INNER JOIN professor p ON t.id_professor = p.id_professor "
 					+ " INNER JOIN cursos c ON t.id_curso = c.id_curso "
-					+ " WHERE t.titulo LIKE ? OR p.nome_professor LIKE ? "
+					+ " WHERE (t.titulo LIKE ? OR p.nome_professor LIKE ? "
 					+ " OR c.curso LIKE ? OR t.resumo LIKE ? OR t.palavra_chave1 LIKE ? "
-					+ " OR t.palavra_chave2 LIKE ? OR t.palavra_chave3 LIKE ? OR a.nome LIKE ?";
+					+ " OR t.palavra_chave2 LIKE ? OR t.palavra_chave3 LIKE ? OR a.nome LIKE ?) "
+					+ " and t.situacao = 'c'";
 			
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 			prep.setString(1, "%" + pesquisa + "%");
@@ -227,7 +260,6 @@ public class TrabalhoDao {
 				dados.add(t);
 				
 			}
-			System.out.println(dados);
 			
 
 			con.getConexao().close();
