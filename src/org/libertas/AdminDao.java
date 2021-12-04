@@ -6,54 +6,27 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class AdminDao {
-/*
-        	Conexao con = new Conexao();
-            System.out.println("login");
-            String login = a.getLogin();
-            System.out.println("senha");
-            String senha = a.getSenha();
-            if(login.equals("") && senha.equals("")){
-                System.out.printf("Usuário % logado com sucesso.", login);
-            }else{
-                System.out.println("Login ou senha inválidos!");
-            }
-        }
-	*/
-	public void consultar(String email, String senha) {
+	
+	public Admin login(String email) {
+		Admin admin = null;
 		try {
 			Conexao con = new Conexao();
-			String sql = "SELECT * FROM admin WHERE email = '"+ email +"'" + "and senha = '" + senha + "'";
-			Statement sta = con.getConexao().createStatement();
+			String sql = "SELECT * FROM admin WHERE email=?";
+			PreparedStatement prep = con.getConexao().prepareStatement(sql);
+			prep.setString(1, email);
+			ResultSet resultado = prep.executeQuery();
 			
-			ResultSet resultado = sta.executeQuery(sql);
-			
-			if (resultado.next()) {
-				System.out.println("login efetuado com sucesso");
+			if(resultado.next()) {
+				admin = new Admin();
+				admin.setEmail(resultado.getString("email"));
+				admin.setSenha(resultado.getString("senha"));
 			}
-			else {
-				System.out.println("login ou senha inválido");
-			}
 			
+			resultado.close();
 			con.getConexao().close();
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		return admin;
 	}
-	
-	public void atualizar(Admin a) {
-		
-	}
-	
-	public List<Admin> listar(){
-		List <Admin> dados = new LinkedList<Admin>();
-		return dados;
-	}
-	
-	public void armazenar(Admin a) {
-	
-	}
-	
-
 }

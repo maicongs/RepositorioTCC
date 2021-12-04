@@ -24,8 +24,5 @@ public class Admin {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public String getLogin() {
-		return null;
-	}
 
 }
