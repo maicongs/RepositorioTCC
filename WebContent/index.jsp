@@ -48,7 +48,7 @@
 	<br>
 	<form class="form-inline" action="index.jsp">
 		<input class="form-control mr-sm-2" type="search"
-			placeholder="Buscar..." aria-label="Pesquisar" name="pesquisa"
+			placeholder="Buscar(sem acentuação)..." aria-label="Pesquisar" name="pesquisa"
 			value="${param.pesquisa}"
 			style="width: 600px; position: relative; left: 50%; margin-left: -300px">
 		<button class="btn btn-outline-primary my-2 my-sm-0" type="submit"
@@ -69,7 +69,7 @@
 					<p>${t.palavra_chave1}</p>
 					<p>${t.palavra_chave2}</p>
 					<p>${t.palavra_chave3}</p>
-					<p>${t.arquivo}</p>
+					<p><a href="../arquivosGrupo2/${t.arquivo}">Arquivo</a></p>
 				</div>
 			</div>
 		</div>
