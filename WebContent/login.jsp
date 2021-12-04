@@ -17,7 +17,7 @@
 	</header>
  	<div class="text-center" style="position: absolute; width:100%; height:100%">
  		<div style= "position: absolute; top:50%; left:50%; width:300px; margin-left: -150px; margin-top: -250px">
-	    <form class="form-signin" action = "Index.jsp" method = "post">
+	    <form class="form-signin" action = "index.jsp" method = "post">
 	      <h1 class="text-center">Login</h1>
 	      <label for="inputEmail" class="sr-only">Usuário</label>
 	      <input type="email" id="inputEmail" class="form-control" placeholder="Digite seu email..." required autofocus>
