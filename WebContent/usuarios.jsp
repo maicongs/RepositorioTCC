@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Lista de Usuários</title>
 </head>
 <body>
-
-<jsp:useBean id="r" class="org.libertas.Repositorio" scope="page"/>
-	<jsp:setProperty property="*" name="r">
-	<p>Excluído com sucesso</p>
+    <h1>Lista de Usuários</h1>
+    <%@include file="login.jsp" %>
 
 </body>
 </html>
