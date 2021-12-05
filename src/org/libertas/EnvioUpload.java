@@ -101,9 +101,10 @@ public class EnvioUpload extends HttpServlet {
 					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
-					+"<p style=\'font-size:30px font-weight:bold\'>Trabalho Enviado com sucesso</p>"															  				 	
+					+"<p style=\'font-size:100px font-weight:bold\'>Trabalho Enviado com sucesso</p>"															  				 	
 					+ "</body>"
-					+ "</html>";
+					+ "</html>"
+					+"<a href=\"Form.jsp\" class=\"btn btn-primary\" style=\"margin:auto\">OK</a>" ;
 					
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -117,9 +118,10 @@ public class EnvioUpload extends HttpServlet {
 					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
-					+"<p style=\'font-size:30px font-weight:bold\'>Falha ao enviar o trabalho</p>"															  				 	
+					+"<p style=\'font-size:100px font-weight:bold\'>Falha ao enviar o trabalho</p>"															  				 	
 					+ "</body>"
-					+ "</html>";
+					+ "</html>"
+					+"<a href=\"Form.jsp\" class=\"btn btn-primary\" style=\"margin:auto\">OK</a>";
 		}
 		
 		
