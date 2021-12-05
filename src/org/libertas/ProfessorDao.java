@@ -6,23 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ProfessorDao {
-    public void submissao(Professor p) {
-        	try {
-    			Conexao con = new Conexao();
-    			String sql = "INSERT INTO professor (id_professor, nome_professor)"
-    					+ " VALUES (?, ?)";
-    			PreparedStatement professor = con.getConexao().prepareStatement(sql);
-    			professor.setInt(1, p.getId_professor());
-    			professor.setString(2, p.getNome_professor());
-    			professor.execute();
-    			
-    			con.getConexao().close();
-    			
-    		} catch (Exception e) {
-    			e.printStackTrace();
-    		}
-    		
-    	}
 	
 	public Professor consultar(int id_professor) {
 			Professor p = new Professor();

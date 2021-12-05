@@ -1,3 +1,4 @@
+<%@page import="org.libertas.TrabalhoDao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,10 +8,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<jsp:useBean id="r" class="org.libertas.Repositorio" scope="page"/>
-	<jsp:setProperty property="*" name="r">
-	<p>Excluído com sucesso</p>
-
+	<%
+		int id_trabalho = Integer.parseInt(request.getParameter("id_trabalho"));
+		TrabalhoDao tdao = new TrabalhoDao();
+		tdao.aceitarTrabalho(id_trabalho);
+	%>
 </body>
 </html>

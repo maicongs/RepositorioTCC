@@ -108,14 +108,24 @@
 					<label class="form-label"><strong style="font-size: 20px">Resumo</strong></label>
 					<textarea class="form-control" name="resumo" value="<%=resumo%>"
 						rows="10"></textarea>
-					<br> <input type="file" name="arquivo"> </br>
-					</br>
-					</br> <label class="form-label"> <span class="h5"><strong>O
+					<br> <input type="file" name="arquivo"> </br> </br> </br> <label
+						class="form-label"> <span class="h5"><strong>O
 								trabalho pode ser postado?</strong></span>
 					</label> <input type="radio" name="confirmacao" value="S"> Sim <input
-						type="radio" name="confirmacao" value="N"> Não </br> 
-						<input type="submit"class="btn btn-primary" value="Salvar"/>
-					<a href="Index.jsp" class="btn btn-danger">Voltar</a>
+						type="radio" name="confirmacao" value="N"> Não </br>
+					<p>
+						Seu trabalho será publicado de acordo com a Lei n° 9610/98,<br>
+						que autoriza a Libertas - Faculdades integradas<br> a
+						disponibilizar em formato eletrônico no repositório<br> de
+						trabalhos acadêmicos da instituição, para fins de<br>
+						consulta, leitura, impressão e/ou download individual<br> a
+						titulo de divulgação científica, o texto integral<br> da obra
+						acima citada, sem responsabilidade de ressarcimento<br> de
+						direitos autorais patrimoniais por parte da<br> Libertas -
+						Faculdades integradas.<br>
+					</p>
+					<input type="submit" class="btn btn-primary" value="Salvar" /> <a
+						href="index.jsp" class="btn btn-danger">Voltar</a>
 				</aside>
 				<div class="card-footer text-muted" style="text-align: center">
 					&copy; Desenvolvido por: André | Maicon | Nathan <br> Libertas
@@ -125,26 +135,37 @@
 	</div>
 
 	<script src="js/bootstrap.min.js"></script>
-<<<<<<< Updated upstream
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+		crossorigin="anonymous"></script>
 	<script>
 		(function() {
 			'use strict';
-        window.addEventListener('load', function() {
-        	var forms = document.getElementsByClassName('needs-validation');
-         	var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-            if (form.checkValidity() === false) {
-            	event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-       }, false);
-     })();
+			window.addEventListener('load',
+					function() {
+						var forms = document
+								.getElementsByClassName('needs-validation');
+						var validation = Array.prototype.filter.call(forms,
+								function(form) {
+									form.addEventListener('submit', function(
+											event) {
+										if (form.checkValidity() === false) {
+											event.preventDefault();
+											event.stopPropagation();
+										}
+										form.classList.add('was-validated');
+									}, false);
+								});
+					}, false);
+		})();
 	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -157,6 +178,6 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
-</form>
+	</form>
 </body>
 </html>
