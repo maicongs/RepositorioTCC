@@ -66,7 +66,7 @@
 		%>
 	</table>
 	</div>
-	<a href="indexAdmin.jsp" class="btn btn-danger">Voltar</a>
+	<a href="indexAdmin.jsp" class="btn btn-danger" style="margin-left:500px">Voltar</a>
 	<a href="todosTrabalhos.jsp" class="btn btn-primary">Trabalhos cadastrados</a>
 	
 	
