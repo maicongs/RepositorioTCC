@@ -12,7 +12,7 @@
 <header>
 	<nav class="navbar navbar-expand" style="background-color:#32CD32">
 	<img src="logo.png" width="200px" height="100px">
-	<span class="display-3">Libertas Repositï¿½rio de Trabalhos</span>
+	<span class="display-3">Libertas Repositório de Trabalhos</span>
 </header>
 <body class="p-3 mb-2 text-black" style="background-color:#90EE90">
 
@@ -25,16 +25,7 @@
 		int id_trabalho = Integer.parseInt(request.getParameter("id_trabalho"));
 		TrabalhoDao tdao = new TrabalhoDao();
 		tdao.aceitarTrabalho(id_trabalho);
-	%>
-
-	<div class="alert" style="background-color:#90EE90;margin:auto">
-  		<div class="card-body" style="text-align:center; margin-top:100px; background-color:#90EE90"  >
-    		<p>Trabalho atualizado com sucesso!!!</p>
-    		<a href="todosTrabalhos.jsp" class="btn btn-primary" style="margin:auto">OK</a>
-  		</div>
-  		
-	</div>
-	
+	%>	
   	
   	<script src="js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -44,7 +35,7 @@
 	<div class="card"  style="backgrund-color: #90EE90">
   		<div class="card-body" style="text-align:center">
     		<h5 class="card-title">Trabalho Aceito com Sucesso</h5>
-    		<a href="Pendentes.jsp" class="btn btn-primary">OK</a>
+    		<a href="todosTrabalhos.jsp" class="btn btn-primary">OK</a>
   		</div>
 	</div>
 </body>

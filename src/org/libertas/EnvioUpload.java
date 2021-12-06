@@ -30,8 +30,8 @@ public class EnvioUpload extends HttpServlet {
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
 			// define a pasta que serï¿½ salvo o arquivo
-			//String pasta = "/var/lib/tomcat9/webapps/arquivosGrupo2/";
-			String pasta = "C:\\Users\\diqui\\Documents\\GitHub\\arquivosGrupo2\\";
+			String pasta = "/var/lib/tomcat9/webapps/arquivosGrupo2/";
+			//String pasta = "C:\\Users\\diqui\\Documents\\GitHub\\arquivosGrupo2\\";
 
 			// verifica se o arquivo existe
 			int i = 1;
@@ -67,7 +67,7 @@ public class EnvioUpload extends HttpServlet {
 			t.setPalavra_chave4(request.getParameter("palavra_chave4"));
 			t.setPalavra_chave5(request.getParameter("palavra_chave5"));
 			t.setTitulo(request.getParameter("titulo"));
-			t.setSituacao("P");
+			t.setSituacao("Pendente");
 			t.setConfirmacao(request.getParameter("confirmacao"));
 			t.setResumo(request.getParameter("resumo"));
 			t.setId_curso(Integer.parseInt(request.getParameter("id_curso")));
@@ -96,17 +96,15 @@ public class EnvioUpload extends HttpServlet {
 					+"<header>"			
 					+"<nav class='navbar navbar-expand' style=\'background-color:#32CD32\'>"	
 					+"<img src=\'logo.png\' width=\'200px\' height=\'100px\'>"
-					+"<span class=\'display-3\'>Libertas Repositï¿½rio de Trabalhos</span>"			
+					+"<span class=\'display-3\'>Libertas Repositório de Trabalhos</span>"			
 					+"</header>"				
 					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
 					+"<p style=\'font-size:30px font-weight:bold\'>Trabalho Enviado com sucesso</p>"
-					+ "<a href='index.jsp'>Ok</a>"
-					+"<p style=\'font-size:100px font-weight:bold\'>Trabalho Enviado com sucesso</p>"															  				 	
+					+ "<a href='index.jsp'>Ok</a>"															  				 	
 					+ "</body>"
-					+ "</html>"
-					+"<a href=\"Form.jsp\" class=\"btn btn-primary\" style=\"margin:auto\">OK</a>" ;
+					+ "</html>";
 					
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -121,11 +119,9 @@ public class EnvioUpload extends HttpServlet {
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
 					+"<p style=\'font-size:30px font-weight:bold\'>Falha ao enviar o trabalho</p>"
-					+"<a href='index.jsp'>Ok</a>"
-					+"<p style=\'font-size:100px font-weight:bold\'>Falha ao enviar o trabalho</p>"															  				 	
+					+"<a href='index.jsp'>Ok</a>"														  				 	
 					+ "</body>"
-					+ "</html>"
-					+"<a href=\"Form.jsp\" class=\"btn btn-primary\" style=\"margin:auto\">OK</a>";
+					+ "</html>";
 		}
 		
 		

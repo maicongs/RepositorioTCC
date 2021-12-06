@@ -5,7 +5,6 @@ import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.catalina.connector.Request;
 
 public class CursoDao {
 

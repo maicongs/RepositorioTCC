@@ -14,7 +14,7 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
-<body>
+<body class="p-3 mb-2 text-black" style="background-color: #90EE90">
 	<div class="container"/>
 	<h1>Trabalhos</h1>
 		

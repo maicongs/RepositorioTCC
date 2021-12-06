@@ -9,7 +9,29 @@ public class Pesquisar {
 	private String palavra_chave2;
 	private String palavra_chave3;
 	private String arquivo;
+	private String situacao;
+	private String confirmacao;
+	private String nome;
 	
+	
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getConfirmacao() {
+		return confirmacao;
+	}
+	public void setConfirmacao(String confirmacao) {
+		this.confirmacao = confirmacao;
+	}
+	public String getSituacao() {
+		return situacao;
+	}
+	public void setSituacao(String situacao) {
+		this.situacao = situacao;
+	}
 	
 	public String getArquivo() {
 		return arquivo;

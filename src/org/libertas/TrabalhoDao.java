@@ -101,7 +101,7 @@ public class TrabalhoDao {
 	public void aceitarTrabalho(int id_trabalho) {
 		try {
 			Conexao con = new Conexao();
-			String sql = "UPDATE trabalho" + " SET situacao = 'c' WHERE id_trabalho = " + id_trabalho;
+			String sql = "UPDATE trabalho" + " SET situacao = 'Aprovado' WHERE id_trabalho = " + id_trabalho;
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 
 			prep.execute();
@@ -115,7 +115,7 @@ public class TrabalhoDao {
 	public void negarTrabalho(int id_trabalho) {
 		try {
 			Conexao con = new Conexao();
-			String sql = "UPDATE trabalho" + " SET situacao = 'N' WHERE id_trabalho = " + id_trabalho;
+			String sql = "UPDATE trabalho" + " SET situacao = 'Negado' WHERE id_trabalho = " + id_trabalho;
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 
 			prep.execute();
@@ -131,7 +131,7 @@ public class TrabalhoDao {
 	public List<Trabalho> listarTrabalho() {
 		List<Trabalho> dados = new LinkedList<Trabalho>();
 		try {
-			String sql = "SELECT * FROM trabalho WHERE situacao = 'c' ORDER BY id_trabalho DESC LIMIT 3";
+			String sql = "SELECT * FROM trabalho WHERE situacao = 'Aprovado' ORDER BY id_trabalho DESC LIMIT 3";
 			Conexao con = new Conexao();
 			Statement sta = con.getConexao().createStatement();
 			ResultSet resultado = sta.executeQuery(sql);
@@ -194,7 +194,7 @@ public class TrabalhoDao {
 	public List<Trabalho> listarTrabalhop() {
 		List<Trabalho> dados = new LinkedList<Trabalho>();
 		try {
-			String sql = "SELECT * FROM trabalho WHERE situacao = 'p'";
+			String sql = "SELECT * FROM trabalho WHERE situacao = 'Pendente'";
 			Conexao con = new Conexao();
 			Statement sta = con.getConexao().createStatement();
 			ResultSet resultado = sta.executeQuery(sql);
@@ -232,7 +232,7 @@ public class TrabalhoDao {
 					+ " WHERE (t.titulo LIKE ? OR p.nome_professor LIKE ? "
 					+ " OR c.curso LIKE ? OR t.resumo LIKE ? OR t.palavra_chave1 LIKE ? "
 					+ " OR t.palavra_chave2 LIKE ? OR t.palavra_chave3 LIKE ? OR a.nome LIKE ?) "
-					+ " and t.situacao = 'c'"
+					+ " and t.situacao = 'Aprovado'"
 					+ " ORDER BY id_trabalho DESC LIMIT 3";
 			
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
@@ -257,6 +257,9 @@ public class TrabalhoDao {
 				t.setPalavra_chave1(resultado.getString("palavra_chave1"));
 				t.setPalavra_chave1(resultado.getString("palavra_chave1"));
 				t.setArquivo(resultado.getString("arquivo"));
+				t.setSituacao(resultado.getString("situacao"));
+				t.setConfirmacao(resultado.getString("confirmacao"));
+				t.setNome(resultado.getString("nome"));
 				
 				dados.add(t);
 				
