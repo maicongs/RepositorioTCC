@@ -29,7 +29,7 @@ public class EnvioUpload extends HttpServlet {
 			Part filePart = request.getPart("arquivo");
 			String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();
 
-			// define a pasta que será salvo o arquivo
+			// define a pasta que serï¿½ salvo o arquivo
 			//String pasta = "/var/lib/tomcat9/webapps/arquivosGrupo2/";
 			String pasta = "C:\\Users\\diqui\\Documents\\GitHub\\arquivosGrupo2\\";
 
@@ -96,15 +96,17 @@ public class EnvioUpload extends HttpServlet {
 					+"<header>"			
 					+"<nav class='navbar navbar-expand' style=\'background-color:#32CD32\'>"	
 					+"<img src=\'logo.png\' width=\'200px\' height=\'100px\'>"
-					+"<span class=\'display-3\'>Libertas Repositório de Trabalhos</span>"			
+					+"<span class=\'display-3\'>Libertas Repositï¿½rio de Trabalhos</span>"			
 					+"</header>"				
 					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
 					+"<p style=\'font-size:30px font-weight:bold\'>Trabalho Enviado com sucesso</p>"
 					+ "<a href='index.jsp'>Ok</a>"
+					+"<p style=\'font-size:100px font-weight:bold\'>Trabalho Enviado com sucesso</p>"															  				 	
 					+ "</body>"
-					+ "</html>";
+					+ "</html>"
+					+"<a href=\"Form.jsp\" class=\"btn btn-primary\" style=\"margin:auto\">OK</a>" ;
 					
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -113,15 +115,17 @@ public class EnvioUpload extends HttpServlet {
 					+"<header>"			
 					+"<nav class='navbar navbar-expand' style=\'background-color:#32CD32\'>"	
 					+"<img src=\'logo.png\' width=\'200px\' height=\'100px\'>"
-					+"<span class=\'display-3\'>Libertas Repositório de Trabalhos</span>"			
+					+"<span class=\'display-3\'>Libertas Repositï¿½rio de Trabalhos</span>"			
 					+"</header>"				
 					+"<body class=\'p-3 mb-2 text-black\' style=\'background-color:#90EE90\'>"
 					+"<div class=\'alert\' style=\'background-color:#90EE90;margin:auto\'>"
 					+"<div class=\'card-body\' style=\'text-align:center; margin-top:100px; background-color:#90EE90\' >"
 					+"<p style=\'font-size:30px font-weight:bold\'>Falha ao enviar o trabalho</p>"
 					+"<a href='index.jsp'>Ok</a>"
+					+"<p style=\'font-size:100px font-weight:bold\'>Falha ao enviar o trabalho</p>"															  				 	
 					+ "</body>"
-					+ "</html>";
+					+ "</html>"
+					+"<a href=\"Form.jsp\" class=\"btn btn-primary\" style=\"margin:auto\">OK</a>";
 		}
 		
 		

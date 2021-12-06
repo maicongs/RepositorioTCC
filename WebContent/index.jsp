@@ -62,7 +62,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4">
-					<p>${t.titulo}</p>
+					<h2>${t.titulo}</h2>
 					<p>${t.nome_professor}</p>
 					<p>${t.curso}</p>
 					<p>${t.resumo}</p>
@@ -74,7 +74,7 @@
 			</div>
 		</div>
 	</c:forEach>
-
+	<c:forEach var="t" items="${tdao1.pesquisarTrabalho(param.pesquisa)}">
 
 	<div class="card-footer text-muted" style="text-align: center">
 		&copy; Desenvolvido por: André | Maicon | Nathan <br> Libertas

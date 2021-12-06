@@ -11,7 +11,7 @@
 <%@page import="org.libertas.TrabalhoDao"%>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>class="p-3 mb-2 text-black" style="background-color: #90EE90"
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +21,7 @@
 <link type="text/css" rel="stylesheet" href="css/all.min.css" />
 </head>
 
-<body class="p-3 mb-2 text-black" style="background-color: #90EE90">
+<body >
 
 	<div class="container">
 		<nav class="navbar navbar-expand-md navbar-light fixed-top"
