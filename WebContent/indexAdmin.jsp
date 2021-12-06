@@ -2,7 +2,7 @@
 <%@page import="org.libertas.Admin"%>
 <%@page import="org.libertas.AdminDao"%>
 <%@page import="org.libertas.RealizaLogin"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page import="org.libertas.ProfessorDao"%>
 <%@page import="org.libertas.Professor"%>
 <%@page import="org.libertas.Aluno"%>
@@ -46,9 +46,10 @@
 	<br>
 	<br>
 	<br>
-	<form class="form-inline">
+	<form class="form-inline" action="index.jsp">
 		<input class="form-control mr-sm-2" type="search"
-			placeholder="Buscar..." aria-label="Pesquisar"
+			placeholder="Buscar(sem acentuação)..." aria-label="Pesquisar" name="pesquisa"
+			value="${param.pesquisa}"
 			style="width: 600px; position: relative; left: 50%; margin-left: -300px">
 		<button class="btn btn-outline-primary my-2 my-sm-0" type="submit"
 			style="position: absolute; left: 630px">Pesquisar</button>
@@ -56,58 +57,31 @@
 	<br>
 	<br>
 	<br>
-
-	<div class="container">
-		<div class="row">
-			<%
-			TrabalhoDao tdao = new TrabalhoDao();
-			AlunoDao adao = new AlunoDao();
-			ProfessorDao pdao = new ProfessorDao();
-			for (Trabalho t : tdao.listarTrabalho()) {
-				Aluno a = adao.consultarAluno(t.getRa_aluno());
-				Professor p = pdao.consultar(t.getId_professor());
-			%>
-			<div class="col-md-4">
-				<h3><%=t.getTitulo()%></h3>
-				<p>
-					Nome:
-					<%=a.getNome()%></p>
-				<p>
-					Orientador:
-					<%=p.getNome_professor()%></p>
-				<p>
-					Resumo:
-					<%=t.getResumo()%></p>
-
-				<p>
-					<a href="../arquivosGrupo2/<%=t.getArquivo()%>"><a
-						class="nav-link" style="color: blue" href="#">Ler mais...</a>
-				</p>
-
-				<td><a href="Form.jsp?id_trabalho=<%=t.getId_trabalho()%>"
-					class="btn btn-primary"> <svg
-							xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-							fill="currentColor" class="bi bi-pencil-square"
-							viewBox="0 0 16 16">
-  <path
-								d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
-  <path fill-rule="evenodd"
-								d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
-</svg>
-				</a></td>
-			</div>
-
-			<%
-			}
-			%>
-			<div class="card-footer text-muted" style="text-align: center">
-				&copy; Desenvolvido por: André | Maicon | Nathan <br> Libertas
-				Faculdades Integradas - 2021
+	<jsp:useBean id="tdao1" class="org.libertas.TrabalhoDao" scope="page" />
+	<c:forEach var="t" items="${tdao1.pesquisarTrabalho(param.pesquisa)}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p>${t.titulo}</p>
+					<p>${t.nome_professor}</p>
+					<p>${t.curso}</p>
+					<p>${t.resumo}</p>
+					<p>${t.palavra_chave1}</p>
+					<p>${t.palavra_chave2}</p>
+					<p>${t.palavra_chave3}</p>
+					<p><a href="../arquivosGrupo2/${t.arquivo}">Arquivo</a></p>
+				</div>
 			</div>
 		</div>
+	</c:forEach>
+
+
+	<div class="card-footer text-muted" style="text-align: center">
+		&copy; Desenvolvido por: André | Maicon | Nathan <br> Libertas
+		Faculdades Integradas - 2021
 	</div>
-
-
+	</div>
+	</div>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

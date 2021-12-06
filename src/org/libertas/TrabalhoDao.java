@@ -232,7 +232,8 @@ public class TrabalhoDao {
 					+ " WHERE (t.titulo LIKE ? OR p.nome_professor LIKE ? "
 					+ " OR c.curso LIKE ? OR t.resumo LIKE ? OR t.palavra_chave1 LIKE ? "
 					+ " OR t.palavra_chave2 LIKE ? OR t.palavra_chave3 LIKE ? OR a.nome LIKE ?) "
-					+ " and t.situacao = 'c'";
+					+ " and t.situacao = 'c'"
+					+ " ORDER BY id_trabalho DESC LIMIT 3";
 			
 			PreparedStatement prep = con.getConexao().prepareStatement(sql);
 			prep.setString(1, "%" + pesquisa + "%");
