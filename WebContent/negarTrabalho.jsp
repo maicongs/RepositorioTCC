@@ -14,7 +14,7 @@
 		<img src="logo.png" width="200px" height="100px"> <span
 			class="display-3">Libertas Repositório de Trabalhos</span>
 </header>
-<title>Trabalho Aceito</title>
+<title>Trabalho Negado</title>
 <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
 <link type="text/css" rel="stylesheet" href="css/all.min.css"/>
 </head>
@@ -41,9 +41,9 @@
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
 
-	<div class="card"  style="backgrund-color: #90EE90">
-  		<div class="card-body" style="text-align:center">
-    		<h5 class="card-title">Trabalho Negado com Sucesso</h5>
+	<div  style="backgrund-color: #90EE90">
+  		<div style="text-align:center">
+    		<h5 class="card-title" style="backgrund-color: #90EE90">Trabalho Negado com Sucesso</h5>
     		<a href="todosTrabalhos.jsp" class="btn btn-primary">OK</a>
   		</div>
 	</div>

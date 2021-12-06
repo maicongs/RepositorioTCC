@@ -16,7 +16,7 @@
 </head>
 <body class="p-3 mb-2 text-black" style="background-color: #90EE90">
 	<div class="container"/>
-	<h1>Trabalhos</h1>
+	<h1 style="text-align:center">Trabalhos</h1>
 		
 	<table class="table table-striped table-hover"/>
 
